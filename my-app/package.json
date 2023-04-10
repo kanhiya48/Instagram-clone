@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^1.0.6",
     "@tailwindcss/forms": "^0.5.3",
     "eslint": "8.37.0",
@@ -19,6 +20,7 @@
     "next-auth": "^4.20.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "recoil": "^0.7.7",
     "tailwind-scrollbar-hide": "^1.1.7",
     "v1": "^1.0.0"
   },

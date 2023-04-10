@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {Header} from '../components/header'
 import {Feed} from  '../components/feed'
+import Modal from '@/components/Modal'
 export default function Home() {
   return (
     <div className='bg-gray-50 h-screen overflow-y-scroll scrollbar-hide'>
@@ -14,6 +15,7 @@ export default function Home() {
       
       {/* header */}
 
+     <Modal/>
      <Header/>
 
 
@@ -23,7 +25,6 @@ export default function Home() {
 
 
      {/* modals */}
-
 
 
     </div>
