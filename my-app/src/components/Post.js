@@ -11,8 +11,9 @@ import{
   BookmarkIcon,
   EmojiHappyIcon,
 } from "@heroicons/react/outline";
+import { useSession } from 'next-auth/react';
 function Post({id,username,userImg,img,caption}) {
-    
+    const {data : session}=useSession();
   return (
     <div className='bg-white my-7 border rounded-sm'>
       {/* header */}
@@ -28,7 +29,8 @@ function Post({id,username,userImg,img,caption}) {
       <img src={img} alt='' className='w-full object-cover' />
 
       {/* buttons */}
-
+     {session && 
+     
       <div className='flex space-x-4 justify-between px-4 pt-4' >
         <div className='flex space-x-4 '>
         <HeartIcon className='btn' />
@@ -37,6 +39,7 @@ function Post({id,username,userImg,img,caption}) {
         </div>
         <BookmarkIcon className='btn' />
       </div>
+     }
 
       {/* captions */}
 
@@ -48,12 +51,14 @@ function Post({id,username,userImg,img,caption}) {
       {/* comments */}
 
       {/* input box */}
+      {session&&
       
       <form className='flex items-center p-4'>
         <EmojiHappyIcon className='h-7'/>
         <input type='text' placeholder='Add a commennt...' className='border-none flex-1 focus:ring-0 outline-none'/>
         <button className='font-semihold text-blue-400'>Post</button>
       </form>
+      }
 
 
 

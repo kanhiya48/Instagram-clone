@@ -58,7 +58,7 @@ export const Header = () => {
       </div>
         ):
         ( <div>
-          <PlusCircleIcon onClick={()=>{setOpen(true)}} className='navBtn'/>
+          
           <button onClick={signIn}>sign In</button>
           </div>
         )}
